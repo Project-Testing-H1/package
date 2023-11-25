@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: 'The name of the new ref (e.g., refs/heads/new-branch)'
+        description: 'The name of the n<img>ew ref (e.g., refs/heads/new-branch)'
         required: true
       sha:
-        description: 'The SHA of the commit to point the new ref to'
+        description: 'The SHA of the <img>commit to point the new ref to'
         required: true
 
 jobs:
