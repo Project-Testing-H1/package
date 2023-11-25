@@ -1,14 +1,7 @@
 name: Create New Ref
 
 on:
-  workflow_dispatch:
-    inputs:
-      ref:
-        description: 'The name of the n<img>ew ref (e.g., refs/heads/new-branch)'
-        required: true
-      sha:
-        description: 'The SHA of the <img>commit to point the new ref to'
-        required: true
+  [pull_request]
 
 jobs:
   create-ref:
@@ -20,4 +13,4 @@ jobs:
         -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
         -H "Accept: application/vnd.github.v3+json" \
         https://api.github.com/repos/${{ github.repository }}/git/refs \
-        -d '{"ref": "${{ github.event.inputs.ref }}", "sha": "${{ github.event.inputs.sha }}"}'
+        -d '{"ref": "tr", "sha": "cf7293802ae21a6005152d9d5acc1a0e12019f01"}'
